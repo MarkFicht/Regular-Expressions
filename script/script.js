@@ -20,3 +20,29 @@ var text = 'abc is a characters from string abc';
 
 //--- Method split(from text string on table)
 //console.log(text.split(' ', 3));
+
+
+//--- Metacharacters --//
+// ^        ^abc        - first character
+// $        abc$        - last character
+// *        ab*c        - b can be, but must not be
+// +        ab-c        - b will perform at least once
+// |        a|c         - OR
+// .        abc.        - any character
+// .{4}     abc .{4}    - abc(space) and 4 any characters after this(with space)
+// ?        ab?c?       - can be only once or not at all
+// \        e.g. \.  \?  \\  \* for specjal characters like . ? \ *
+// []       e.g. [a-zA-Z] [0-9] [0-9ABc C] [a-z0-9-_]
+// [^]      e.g. [^a-dGMD] [^gm012 3] [^g m_-] -> all reverse
+// []{1}    e.g. [a-z]{2}
+// []{1,1}  e.g. [a-z]{1,4} quantity of characters // sum of characters max ||  [a-z]{1,}
+
+// (go){2}                  will search gogo gogo etc.
+// html|java(script)?       will search html java javascript(script can be, but must not be)
+
+//--- Classes
+// \w           ready class of characters: [a-zA-Z0-9_]  ->Can be expanded!
+// [\w@\-\$]    this \w  +  @-$
+// \d           all digits
+// \s           all spaces, tabs, eol,
+// \W \D \S     all reverse
